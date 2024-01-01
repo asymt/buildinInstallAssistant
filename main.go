@@ -8,7 +8,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/jony-lee/go-progress-bar"
+	progress "github.com/jony-lee/go-progress-bar"
 	"log"
 	"math"
 	"os"
@@ -37,6 +37,10 @@ func init() {
 }
 
 func main() {
+	start()
+}
+
+func start() {
 	var username, password string
 	fmt.Println("欢迎使用长沙市装配式建筑项目信息采集平台预制构件自动安装助手")
 	fmt.Print("\r请输入登录用户名：")
@@ -136,7 +140,6 @@ func main() {
 	}
 	fmt.Println("按ENTER键关闭本窗口……")
 	_, _ = fmt.Scanln()
-
 }
 
 func clearConsole(lineNumber int) {
